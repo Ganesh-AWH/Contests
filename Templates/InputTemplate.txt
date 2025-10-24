@@ -47,17 +47,20 @@ public class Geeks {
 
     public static void main(String[] args) {
         FastReader fr = new FastReader();
-        int n = fr.nextInt();
-        int k = fr.nextInt();
-        int []arr = new int[n];
-        for(int i=0; i<n; i++){
-            arr[i] = fr.nextInt();
-        }
+        int t = fr.nextInt();
         PrintWriter out = new PrintWriter(System.out);
-        if(k == 1){
-            out.println("No");
-        }else{
-            out.println("Yes");
+        while(t-->0){
+            int n = fr.nextInt();
+            int k = fr.nextInt();
+            int []arr = new int[n];
+            for(int i=0; i<n; i++){
+                arr[i] = fr.nextInt();
+            }
+            if(k == 1){
+                out.println("No");
+            }else{
+                out.println("Yes");
+            }
         }
         out.flush();
     }

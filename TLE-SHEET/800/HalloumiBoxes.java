@@ -66,17 +66,17 @@ public class HalloumiBoxes {
       
         // Create a FastReader instance for input
         FastReader fr = new FastReader();
+        PrintWriter out = new PrintWriter(System.out);
 
         int t = fr.nextInt();
         while(t-->0){
             int n = fr.nextInt();
             int k = fr.nextInt();
-            
+
             int []arr = new int[n];
             for(int i=0; i<n; i++){
                 arr[i] = fr.nextInt();
             }
-            PrintWriter out = new PrintWriter(System.out);
             if(isSorted(arr)){
                 out.println("yes");
             }else if(k == 1){
@@ -84,8 +84,8 @@ public class HalloumiBoxes {
             }else{
                 out.println("Yes");
             }
-            out.flush();
         }
+        out.flush();
     }
     public static boolean isSorted(int []arr){
         for(int i=1; i<arr.length; i++){

@@ -67,25 +67,29 @@ public class Geeks {
       
         // Create a FastReader instance for input
         FastReader fr = new FastReader();
-
-        // Read the number of integers (n) and the divisor (k)
-        int n = fr.nextInt();
-        int k = fr.nextInt();
-
-
-        int []arr = new int[n];
-        for(int i=0; i<n; i++){
-            arr[i] = fr.nextInt();
-        }
-
+        int t = fr.nextInt();
+        
         //writing the output using printwriter
         PrintWriter out = new PrintWriter(System.out);
-        if(k == 1){
-            out.println("No");
-        }else{
-            out.println("Yes");
+        while(t-->0){
+            // Read the number of integers (n) and the divisor (k)
+            int n = fr.nextInt();
+            int k = fr.nextInt();
+
+
+            int []arr = new int[n];
+            for(int i=0; i<n; i++){
+                arr[i] = fr.nextInt();
+            }
+
+            if(k == 1){
+                out.println("No");
+            }else{
+                out.println("Yes");
+            }
         }
         //first it stores output in buffer and prints the output when it is flushed
+        //note - it should be flushed after the test cases
         out.flush();
     }
 }
